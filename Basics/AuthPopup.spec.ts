@@ -5,7 +5,7 @@ import { channel } from 'diagnostics_channel';
  const uname ='admin';
  const pass ='admin';
 
-test('login test',async()=>{
+test('Auth login test',async()=>{
     const browser:Browser = await chromium.launch({headless:false,channel:"chrome"}); //to run in locally available browser run channel 
     const page:Page=await browser.newPage();
     page.setExtraHTTPHeaders({Authorization:createAuth(uname,pass)});

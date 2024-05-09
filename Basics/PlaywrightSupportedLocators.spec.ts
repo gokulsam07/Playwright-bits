@@ -2,7 +2,7 @@ import {test, expect, Browser, Page, chromium,Locator,Expect} from '@playwright/
 import { ChromiumBrowser } from '@playwright/test';
 import { channel } from 'diagnostics_channel';
 
-test('login test',async()=>{
+test('locators test',async()=>{
     const browser:Browser = await chromium.launch({headless:false,channel:"chrome"});
     const page:Page=await browser.newPage();
     await page.goto('https://tutorialsninja.com/demo/index.php?route=account/login');

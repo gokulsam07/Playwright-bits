@@ -1,7 +1,7 @@
 import {test, expect, Browser, Page, chromium,Locator,Expect, BrowserContext} from '@playwright/test';
 import { ChromiumBrowser } from '@playwright/test';
 
-test('login test',async({}, testInfo)=>{
+test('multi context test',async({}, testInfo)=>{
     testInfo.setTimeout(60000);
     const browser:Browser = await chromium.launch({headless:false,executablePath:"C:/Program Files/Google/Chrome/Application/chrome.exe"});
     //this will run in the version available in the path mentioned
