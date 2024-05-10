@@ -50,7 +50,6 @@ test('multi window handle', async () => {
     await page.waitForTimeout(4000);
 });
 
-
 test('multi window array handle', async () => {
     const browser: Browser = await chromium.launch({ headless: false, channel: "chrome" });
     const context: BrowserContext = await browser.newContext();
