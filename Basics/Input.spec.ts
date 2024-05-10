@@ -3,7 +3,7 @@ import { ChromiumBrowser } from '@playwright/test';
 import { channel } from 'diagnostics_channel';
 
 
-test('login test',async()=>{
+test('input types test',async()=>{
     const browser:Browser = await chromium.launch({headless:false,channel:"chrome"}); 
     const page:Page=await browser.newPage();
     await page.goto('https://letcode.in/edit');
