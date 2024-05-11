@@ -24,3 +24,24 @@ test('drag drop test via mouse', async () => {
     page.mouse.up();
     await page.waitForTimeout(5000);
 });
+
+
+test('silder test', async () => {
+    const browser: Browser = await chromium.launch({ headless: false,channel:'chrome'});
+    const context: BrowserContext = await browser.newContext();
+    const page: Page = await context.newPage();
+    await page.goto('https://demo.automationtesting.in/Slider.html');
+    await page.waitForLoadState();
+    const slideBar = await page.locator('css=#slider');
+    const slider = await page.locator("css=.ui-slider-handle.ui-state-default.ui-corner-all").first();
+    const sliderBarBB = await slideBar.boundingBox();
+    if(sliderBarBB){
+        const targetX = sliderBarBB.x + sliderBarBB.width / 2;
+        const targetY = sliderBarBB.y + sliderBarBB.height / 2;
+        await slideBar.click(); 
+        await page.mouse.down(); 
+        await page.mouse.move(targetX, targetY); 
+        await page.mouse.up(); 
+    }
+        await page.waitForTimeout(5000);  
+});
