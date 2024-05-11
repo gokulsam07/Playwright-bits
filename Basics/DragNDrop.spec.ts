@@ -32,8 +32,7 @@ test('silder test', async () => {
     const page: Page = await context.newPage();
     await page.goto('https://demo.automationtesting.in/Slider.html');
     await page.waitForLoadState();
-    const slideBar = await page.locator('css=#slider');
-    const slider = await page.locator("css=.ui-slider-handle.ui-state-default.ui-corner-all").first();
+    const slideBar = await page.locator('css=#slider'); //just focus on the bar and the location need to be set
     const sliderBarBB = await slideBar.boundingBox();
     if(sliderBarBB){
         const targetX = sliderBarBB.x + sliderBarBB.width / 2;
