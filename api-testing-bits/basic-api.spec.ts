@@ -39,6 +39,7 @@ const postData = {
     "status": "available"
   };
 
+
 test('1 API post call', async({request})=>{
   const response = await request.post("https://petstore.swagger.io/v2/pet",{data: postData});
   console.log(await response.json());
@@ -48,6 +49,8 @@ test('1 API post call', async({request})=>{
 test('2 API put call', async({request})=>{
     const response = await request.put("https://petstore.swagger.io/v2/pet",{data: putData});
     console.log(await response.json());
+    //or 
+   // JSON.parse(await response.text());
     expect(response.status()).toBe(200);
   });
   
