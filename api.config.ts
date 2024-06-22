@@ -5,10 +5,7 @@ const config = {
     //retries :2,
     testDir:'./api-testing-bits',
     fullyParallel: true,
-    reporter: [
-        ['json', { outputFile: 'test-results.json' }],
-        ['html', { outputFolder: 'html-report', open: 'never' }]
-      ],
+    reporter: 'html',
     workers:5,
     use:{
         headless:false,
