@@ -25,5 +25,6 @@ test('cross frame drop test', async () => {
     const draggableElement = await page.frameLocator('#draggableNodes')?.locator("css=img[alt='John Lennon']");
     draggableElement ? await draggableElement.dragTo(await page.frameLocator("#dropTargets").locator("css=#dropTarget")) : console.log('element can be moved');
     await page.waitForTimeout(5000);
+    await browser.close();
 });
 

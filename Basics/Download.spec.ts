@@ -30,6 +30,7 @@ test('download test',async()=>{
     } else {
         console.log(`The file '${fileLocation}' does not exist in the download location.`);
     }
+    await browser.close();
 }); 
 
 

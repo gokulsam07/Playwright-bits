@@ -13,6 +13,7 @@ test('Auth login test',async()=>{
     await page.waitForLoadState('networkidle');
     const alertMessage:Locator = await page.locator("css=div[class='example'] p");
     expect(await alertMessage.textContent()).toContain('Congratulations! You must have the proper credentials.');
+    await browser.close();
 });
 
 function createAuth(username: string, password: string): string {

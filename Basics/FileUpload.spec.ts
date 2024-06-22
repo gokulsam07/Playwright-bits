@@ -10,6 +10,7 @@ test('file upload test single', async () => {
     await page.goto('https://cgi-lib.berkeley.edu/ex/fup.html');
     await page.locator("css=input[name='upfile']").setInputFiles("C:/Documentum/Files/1.bmp")
     await page.waitForTimeout(5000);
+    await browser.close();
 });
 
 
@@ -20,4 +21,5 @@ test('file upload test mutliple', async () => {
     await page.goto('https://davidwalsh.name/demo/multiple-file-upload.php');
     await page.locator("css=#filesToUpload").setInputFiles([path.join("C:/Documentum/Files/1.bmp"),path.join("C:/Documentum/Files/Sherlock.pdf")])
     await page.waitForTimeout(5000);
+    await browser.close();
 });

@@ -23,4 +23,5 @@ test('select test', async () => {
             await expect(await option).toHaveCSS('background-color','rgba(0, 0, 0, 0)');
         }
     }
+    await browser.close();
 });

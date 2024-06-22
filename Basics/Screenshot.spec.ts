@@ -12,4 +12,5 @@ test('screenshot test',async()=>{
     await name.focus();
     await name.fill("gokuls2381@gmail.com");
     await page.screenshot({ path: 'screenshot.png',fullPage:true }) //page level screenshot -- supports options for customisation
+    await browser.close();
 }); 

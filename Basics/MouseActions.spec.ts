@@ -10,6 +10,7 @@ test('mouse actions test', async () => {
     await page.waitForLoadState('networkidle');
     await page.getByText("Double-Click Me To See Alert").dblclick();
     await page.waitForTimeout(5000);
+    await browser.close();
 });
 
 test('right test', async () => {
@@ -20,6 +21,7 @@ test('right test', async () => {
     await page.waitForLoadState('networkidle');
     await page.getByText("right click me").click({ button: 'right' });
     await page.waitForTimeout(5000);
+    await browser.close();
 });
 
 test('shift test', async () => {
@@ -30,6 +32,7 @@ test('shift test', async () => {
     await page.waitForLoadState('networkidle');
     await page.getByText("Example 1: Menu Element").click({ modifiers: ["Shift"] });
     await page.waitForTimeout(5000);
+    await browser.close();
 });
 
 test('click and hold test', async () => {
@@ -43,5 +46,6 @@ test('click and hold test', async () => {
     //or
     await button.scrollIntoViewIfNeeded();
     await button.click({ delay: 5000 });
+    await browser.close();
 });
 

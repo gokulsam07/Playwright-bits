@@ -19,4 +19,5 @@ test('locators test',async()=>{
     expect(phoneLogo.isEnabled());
     expect(await page.title()).toBe('My Account');
     await page.locator("xpath=//a[normalize-space()='Desktops']").click();
+    await browser.close();
 });

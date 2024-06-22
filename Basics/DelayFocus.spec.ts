@@ -10,6 +10,7 @@ test('delay and focus test',async()=>{
     await page.waitForLoadState('networkidle');
     await page.getByPlaceholder('Search for Products, Brands and More').pressSequentially('Macbook Air',{delay:500});
     await page.waitForTimeout(2000);
+    await browser.close();
 });
 
 
@@ -23,4 +24,5 @@ test('focus test',async()=>{
     await name.focus();
     await name.fill("gokuls2381@gmail.com");
     await page.waitForTimeout(2000);
+    await browser.close();
 });

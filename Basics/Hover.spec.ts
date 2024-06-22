@@ -12,5 +12,5 @@ test('hover test',async()=>{
     await page.getByText('You1st').click();
     await context.waitForEvent('page');
     await page.waitForTimeout(5000);
-
+    await browser.close();
 });

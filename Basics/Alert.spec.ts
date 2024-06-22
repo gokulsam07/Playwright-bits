@@ -20,4 +20,5 @@ test('alert test', async () => {
     await page.reload();
     await page.waitForLoadState('domcontentloaded');
     await page.getByText("Simple Alert").click(); // don't handle dialog twice
+    await browser.close();
 });

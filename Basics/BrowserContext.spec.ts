@@ -31,4 +31,5 @@ test('multi context test',async({}, testInfo)=>{
     const alertMessage = await page2.locator("css=.oxd-text.oxd-text--p.oxd-alert-content-text");
     await alertMessage.waitFor({ state: 'visible' });
     expect(await alertMessage.textContent()).toBe('Invalid credentials');
+    await browser.close();
 });

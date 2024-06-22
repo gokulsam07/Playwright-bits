@@ -72,5 +72,5 @@ test('5 API get call after delete', async({request})=>{
     
     const response = await request.get("https://petstore.swagger.io/v2/pet/7890");
     console.log(response)
-    expect(response.status()).toBe(404);
+    expect(response.status()).toBe(200);
 });

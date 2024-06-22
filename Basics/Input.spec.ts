@@ -17,4 +17,5 @@ test('input types test',async()=>{
     await page.waitForTimeout(2000);
     await page.locator("id=clearMe").clear();
     await page.waitForTimeout(2000);
+    await browser.close();
 });

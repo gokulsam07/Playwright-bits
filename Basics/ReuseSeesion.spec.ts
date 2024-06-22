@@ -27,4 +27,5 @@ test('login without login page',async()=>{
     await page.waitForLoadState('networkidle');
     expect(page.locator("//h6[normalize-space()='Dashboard']")).toBeVisible();
     await page.waitForTimeout(4000);
+    await browser.close();
 });

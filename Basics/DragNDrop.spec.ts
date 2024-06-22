@@ -10,6 +10,7 @@ test('drag drop test', async () => {
     const frame = await page.frameLocator("//iframe[@class='demo-frame']");
     await frame?.locator('id=draggable').dragTo(await frame.locator('id=droppable')); //checks if not null or undefined
     await page.waitForTimeout(5000);
+    await browser.close();
 });
 
 test('drag drop test via mouse', async () => {
@@ -23,6 +24,7 @@ test('drag drop test via mouse', async () => {
     await frame.locator('id=droppable').hover();
     page.mouse.up();
     await page.waitForTimeout(5000);
+    await browser.close();
 });
 
 
@@ -43,4 +45,5 @@ test('silder test', async () => {
         await page.mouse.up(); 
     }
         await page.waitForTimeout(5000);  
+        await browser.close();
 });

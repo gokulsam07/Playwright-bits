@@ -15,4 +15,5 @@ test('frames test', async () => {
     await frame2?.locator("css=input[placeholder='Enter email']").fill("gokuls2381@gmail.com");
     await frame1?.locator("css=input[placeholder='Enter email']").fill("Saminathan");
     await page.waitForTimeout(3000); 
+    await browser.close();
 });

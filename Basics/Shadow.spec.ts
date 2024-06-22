@@ -10,6 +10,7 @@ test('open shadow root test', async () => {
     const frame = await page.locator("id=fname"); //open shadow root can be pierced directly
     await frame.fill('Gokul');
     await page.waitForTimeout(5000);
+    await browser.close();
 });
 
 
@@ -29,4 +30,5 @@ test('closed shadow root test', async () => {
     await page.keyboard.press('Tab');
     await page.keyboard.type('Saminathan');
     await page.waitForTimeout(5000);
+    await browser.close();
 });

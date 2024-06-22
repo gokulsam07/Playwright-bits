@@ -17,4 +17,5 @@ test('login test',async()=>{
     const title:String = await page.title();
     console.log(title);
     expect(title).toBe('OrangeHRM');
+    await browser.close();
 });

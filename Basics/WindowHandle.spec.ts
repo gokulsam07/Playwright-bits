@@ -28,6 +28,7 @@ test('window test', async () => {
     await expect(Promise.race([alertSelectorPromise, dropdownsSelectorPromise])).toBeTruthy();
 
     await page.waitForTimeout(1000);
+    await browser.close();
 });
 
 
@@ -48,6 +49,7 @@ test('multi window handle', async () => {
         console.log(await tab.title());
     }
     await page.waitForTimeout(4000);
+    await browser.close();
 });
 
 test('multi window array handle', async () => {
@@ -75,4 +77,5 @@ test('multi window array handle', async () => {
     } else {
         console.error('Page with title', pageTitleToFocus, 'not found!');
     }
+    await browser.close();
 });
