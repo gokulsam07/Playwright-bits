@@ -1,10 +1,14 @@
-import { PlaywrightTestConfig, chromium } from "@playwright/test";
+import { PlaywrightTestConfig, chromium,firefox,webkit } from "@playwright/test";
 
 const config = {
     timeout :60000,
     //retries :2,
     testDir:'./api-testing-bits',
     fullyParallel: true,
+    reporter: [
+        ['json', { outputFile: 'test-results.json' }],
+        ['html', { outputFolder: 'html-report', open: 'never' }]
+      ],
     workers:5,
     use:{
         headless:false,
