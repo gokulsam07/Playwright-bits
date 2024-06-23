@@ -5,13 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test-api-chromium": "playwright test --config=api.config.ts --project=chromium",
-      "test-ui-chromium":"playwright test --config=ui.config.ts --project=chromium"
+    "test-ui-chromium": "playwright test --config=ui.config.ts --project=chromium"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.44.0",
-    "@types/node": "^20.12.11"
+    "@types/node": "^20.12.11",
+    "allure-commandline": "^2.29.0",
+    "allure-playwright": "^3.0.0-beta.3"
   }
 }
